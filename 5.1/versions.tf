@@ -3,11 +3,11 @@ terraform {
 
     required_providers {
       local = {
-        soure = "hashicotp/local"
+        source = "hashicorp/local"
         version = "~>2.5.0"
       }
       random = {
-        soure = "hashicotp/random"
+        source = "hashicorp/random"
         version = "~>3.6.0"
       }
     }
