@@ -1,10 +1,13 @@
+locals {
+  dynamic_separetor = var.random_pet > 2 ? "-" : "_"
+}
 resource "random_pet" "Pet" {
-  length    = 2
-  separator = "-"
-  prefix    = "work"
+  length    = var.random_pet
+  separator = local.dynamic_separetor
+  prefix    = var.prefix
 }
 
 resource "local_file" "Pet_name" {
-  filename = "${path.module}/petsname.txt"
+  filename = var.File_petsname
   content  = "Имя моего питомца: ${random_pet.Pet.id}\n"
 }
