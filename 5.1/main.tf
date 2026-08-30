@@ -1,13 +1,20 @@
-locals {
-  dynamic_separetor = var.random_pet > 2 ? "-" : "_"
-}
-resource "random_pet" "Pet" {
-  length    = var.random_pet
-  separator = local.dynamic_separetor
-  prefix    = var.prefix
+module "dev_config_files" {
+  source = "./modules/config-files"
+  File_petsname = "dev-${var.File_petsname}"
+  random_pet = 2
+  prefix = "dev-${var.prefix}"
 }
 
-resource "local_file" "Pet_name" {
-  filename = var.File_petsname
-  content  = "Имя моего питомца: ${random_pet.Pet.id}\n"
+module "stage_config_files" {
+  source = "./modules/config-files"
+  File_petsname = "stage-${var.File_petsname}"
+  random_pet = 3
+  prefix = "stage-${var.prefix}"
+}
+
+module "prod_config_files" {
+  source = "./modules/config-files"
+  File_petsname = "prod-${var.File_petsname}"
+  random_pet = 4
+  prefix = "prod-${var.prefix}"
 }
