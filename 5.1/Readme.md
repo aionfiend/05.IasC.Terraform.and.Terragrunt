@@ -9,7 +9,8 @@ terraform.tfstate - сожержит множество секретной и/и
 в нее вдругой вредоносный код.
 
 # 5.2
-"user@users-MacBook-Pro$ tofu plan
+
+user@users-MacBook-Pro$ tofu plan
 random_pet.Pet: Refreshing state... [id=work_possibly_real_minnow]
 local_file.Pet_name: Refreshing state... [id=3976f7791ad8afa1da3f59319df2b8a343e14a3d]
 
@@ -50,7 +51,7 @@ Plan: 2 to add, 0 to change, 2 to destroy.
       ~ prefix    = (sensitive value)
         # (2 unchanged attributes hidden)
 
-##### 5.2.6
+# 5.2.6
  №1 Минимальный приоритет
  bash:
     export TF_VAR_prefix="env-srcret"
