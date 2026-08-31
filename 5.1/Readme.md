@@ -54,10 +54,10 @@ Plan: 2 to add, 0 to change, 2 to destroy.
 
 # 5.2.6
  №1 Минимальный приоритет
- bash:
-    export TF_VAR_prefix="env-srcret"
-    export TF_VAR_rendom_pet=2
-    tofu plan
+* bash:
+*     export TF_VAR_prefix="env-srcret"
+*     export TF_VAR_rendom_pet=2
+*     tofu plan
  
 №2 Средний приоритет
  bash:
