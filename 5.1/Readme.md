@@ -19,7 +19,7 @@ OpenTofu used the selected providers to generate the following execution plan. R
 
 OpenTofu will perform the following actions:
 
-# local_file.Pet_name must be replaced
+***local_file.Pet_name must be replaced
 -/+ resource "local_file" "Pet_name" {
 ~ content              = <<-EOT # forces replacement
 Имя моего питомца: work_possibly_real_minnow
@@ -30,15 +30,15 @@ EOT -> (known after apply) # forces replacement
 ~ content_sha1         = "3976f7791ad8afa1da3f59319df2b8a343e14a3d" -> (known after apply)
 ~ content_sha256       = "5f7cf0cba34c2c9886c596eda33ab305b47e175083d43dd22e439cfc2d68a23d" -> (known after apply)
 ~ content_sha512       = "504af8cc27b277009e56137153f9eec96e0652b03a2f20bd9b8cddc6767234280a74773ee61be2da94600946a06e852c6bae7560a1954a32ebacd94eaff4283f" -> (known after apply)
-~ id                   = "3976f7791ad8afa1da3f59319df2b8a343e14a3d" -> (known after apply)
-# (3 unchanged attributes hidden)
+~ id                   = "3976f7791ad8afa1da3f59319df2b8a343e14a3d" -> (known after apply) 
+***(3 unchanged attributes hidden)
 }
 
-# random_pet.Pet must be replaced
+*** random_pet.Pet must be replaced
 -/+ resource "random_pet" "Pet" {
 ~ id        = "work_possibly_real_minnow" -> (known after apply)
 ~ separator = "_" -> "-" # forces replacement
-# (2 unchanged attributes hidden)
+*** (2 unchanged attributes hidden)
 }
 
 Plan: 2 to add, 0 to change, 2 to destroy.
@@ -46,7 +46,7 @@ Plan: 2 to add, 0 to change, 2 to destroy.
 
 ################
 
-# Warning: this attribute value will be marked as sensitive and will not
+*** Warning: this attribute value will be marked as sensitive and will not
       # display in UI output after applying this change. The value is unchanged.
       ~ prefix    = (sensitive value)
         # (2 unchanged attributes hidden)
