@@ -47,10 +47,10 @@ Plan: 2 to add, 0 to change, 2 to destroy.
 
 ################
 
-* Warning: this attribute value will be marked as sensitive and will not
-*       # display in UI output after applying this change. The value is unchanged.
-*       ~ prefix    = (sensitive value)
-*        # (2 unchanged attributes hidden)
+Warning: this attribute value will be marked as sensitive and will not
+      # display in UI output after applying this change. The value is unchanged.
+      ~ prefix    = (sensitive value)
+       # (2 unchanged attributes hidden)
 
 # 5.2.6
  №1 Минимальный приоритет
