@@ -54,18 +54,18 @@ Plan: 2 to add, 0 to change, 2 to destroy.
 
 # 5.2.6
  №1 Минимальный приоритет
-* bash:
-*     export TF_VAR_prefix="env-srcret"
-*     export TF_VAR_rendom_pet=2
-*     tofu plan
+ bash:
+ 1.   export TF_VAR_prefix="env-srcret"
+ 2.   export TF_VAR_rendom_pet=2
+ 3.   tofu plan
  
 №2 Средний приоритет
  bash:
-    cp terraform.tfvars.example terraform.tfvars
-    tofu plan
+ 1.   cp terraform.tfvars.example terraform.tfvars
+ 2.   tofu plan
 
 №3 Максимальный приоритет
-    tofu plan -var="prefix=cli-secret" -var="rendom+pet=5" -var="File+petsname=cli_file.txt"
+ 1.   tofu plan -var="prefix=cli-secret" -var="rendom+pet=5" -var="File+petsname=cli_file.txt"
 
 # 5.3.5
 1. Дублирование кода (Принцип DRY — Don't Repeat Yourself)
